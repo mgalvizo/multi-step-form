@@ -1036,6 +1036,13 @@ a:link:hover {
         margin-bottom: var(--web-margin-m);
     }
 
+    .app-layout__content {
+        padding: var(--web-padding-xl) var(--web-padding-l);
+        background-color: var(--white);
+        border-radius: var(--form-border-radius);
+        box-shadow: var(--form-box-shadow);
+    }
+
     // 768px
     @media only screen and (min-width: 48em) {
         display: flex;
@@ -1049,6 +1056,7 @@ a:link:hover {
 
         .app__layout {
             flex-basis: var(--max-content-width);
+            text-align: center;
         }
     }
 `,XS=()=>{const e=An(),t=()=>{e(-1)};return S.jsx(GS,{children:S.jsx("div",{className:"app__layout",children:S.jsxs("div",{className:"app-layout__content",children:[S.jsx(Dt,{as:"h1",children:"We can't find the page you're looking for."}),S.jsx($n,{type:"button",onClick:t,kind:"back",children:"Go Back"})]})})})},qS=({children:e})=>{const t=An(),{personalInfo:n,selectPlan:r,pickAddons:i,isComplete:o}=Dr(Um),l=Object.values(n).every(f=>f===""),a=r.plan==="",u=Object.values(r.billingPeriod).every(f=>f===!1),s=Object.values(i).every(f=>f===!1);return b.useEffect(()=>{o?t("/thank-you"):l&&a&&u&&s&&t("/personal-info")},[o,l,a,u,s,t]),e},ZS=()=>S.jsxs(S.Fragment,{children:[S.jsx(Qx,{}),S.jsx(Dw,{children:S.jsxs(Tw,{children:[S.jsxs(Ut,{element:S.jsx(qS,{children:S.jsx(aS,{})}),children:[S.jsx(Ut,{index:!0,element:S.jsx(jw,{replace:!0,to:"personal-info"})}),S.jsx(Ut,{path:"personal-info",element:S.jsx(RS,{})}),S.jsx(Ut,{path:"select-plan",element:S.jsx(MS,{})}),S.jsx(Ut,{path:"pick-addons",element:S.jsx(BS,{})}),S.jsx(Ut,{path:"finishing-up",element:S.jsx(HS,{})}),S.jsx(Ut,{path:"thank-you",element:S.jsx(YS,{})})]}),S.jsx(Ut,{path:"*",element:S.jsx(XS,{})})]})})]}),JS=document.getElementById("root"),e2=vm(JS);e2.render(S.jsx(b.StrictMode,{children:S.jsx(V0,{store:U1,children:S.jsx(ZS,{})})}));
